@@ -1,0 +1,42 @@
+Index: library/src/morpheus-master/js/src/sakai.morpheus.bullhorns.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- library/src/morpheus-master/js/src/sakai.morpheus.bullhorns.js	(revision 35e4ced3ed95a2d203974a5ba54e6c533f1f5e9c)
++++ library/src/morpheus-master/js/src/sakai.morpheus.bullhorns.js	(revision a7845b21781d5c8070078df0b9116f5083352c4b)
+@@ -78,6 +78,8 @@
+                                 return portal.wrapNoAlertsString(data.i18n.noAlerts);
+                             } else {
+                                 var markup = '<div class="portal-bullhorn-social-alerts">';
++
++                                markup += '<div id="portal-bullhorn-clear-all"><a href="javascript:;" onclick="portal.clearAllAlerts(\'Social\',\'' + data.i18n.noAlerts + '\');">' + data.i18n.clearAll + '</a></div>';
+                                 data.alerts.forEach(function (alert) {
+ 
+                                     if (alert.event === 'profile.friend.request') {
+@@ -122,7 +124,7 @@
+                                     markup += '</div><div class="portal-bullhorn-clear"><a href="javascript:;" onclick="portal.clearBullhornAlert(\'social\', \'' + alert.id + '\',\'' + data.i18n.noAlerts + '\');" title="' + data.i18n.clear + '"><i class="fa fa-times" aria-hidden="true"></i></a></div></div></a>';
+                                 });
+ 
+-                                markup += '<div id="portal-bullhorn-clear-all"><a href="javascript:;" onclick="portal.clearAllAlerts(\'Social\',\'' + data.i18n.noAlerts + '\');">' + data.i18n.clearAll + '</a></div>';
++
+ 
+                                 markup += '</div>';
+                                 return markup;
+@@ -169,6 +171,7 @@
+                                 return portal.wrapNoAlertsString(data.i18n.noAlerts);
+                             } else {
+                                 var markup = '<div class="portal-bullhorn-academic-alerts">';
++                                markup += '<div id="portal-bullhorn-clear-all"><a href="javascript:;" onclick="portal.clearAllAlerts(\'Academic\',\'' + data.i18n.noAlerts + '\');">' + data.i18n.clearAll + '</a></div>';
+                                 data.alerts.forEach(function (alert) {
+ 
+                                     var title = alert.title;
+@@ -211,7 +214,7 @@
+                                     markup += '</div><div class="portal-bullhorn-clear"><a href="javascript:;" onclick="portal.clearBullhornAlert(\'academic\', \'' + alert.id + '\',\'' + data.i18n.noAlerts + '\');" title="' + data.i18n.clear + '"><i class="fa fa-times" aria-hidden="true"></i></a></div></div></a>';
+                                 });
+ 
+-                                markup += '<div id="portal-bullhorn-clear-all"><a href="javascript:;" onclick="portal.clearAllAlerts(\'Academic\',\'' + data.i18n.noAlerts + '\');">' + data.i18n.clearAll + '</a></div>';
++
+ 
+                                 markup += '</div>';
+                                 return markup;
