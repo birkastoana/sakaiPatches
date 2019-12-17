@@ -1,0 +1,16 @@
+Index: library/src/morpheus-master/js/src/sakai.morpheus.bullhorns.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- library/src/morpheus-master/js/src/sakai.morpheus.bullhorns.js	(revision be1313cc835b5120edaacd5117755a16e40681bf)
++++ library/src/morpheus-master/js/src/sakai.morpheus.bullhorns.js	(revision b76e01d834c01cd55daa112191451967dc555519)
+@@ -172,7 +172,7 @@
+                             } else {
+                                 var markup = '<div class="portal-bullhorn-academic-alerts">';
+                                 //sdf
+-                                markup += '<div id="portal-bullhorn-clear-all"><a href="javascript:;" onclick="portal.clearAllAlerts(\'Academic\',\'' + data.i18n.noAlerts + '\');">' + data.i18n.clearAll + '</a></div>';
++                                markup += '<div id="portal-bullhorn-clear-all"style="background-color: #666; border-color: white; border-width: thick; border-style: solid; text-align: center"><a href="javascript:;" onclick="portal.clearAllAlerts(\'Academic\',\'' + data.i18n.noAlerts + '\');"style="color: white; font-weight: bold">' + data.i18n.clearAll + '</a></div>';
+                                 data.alerts.forEach(function (alert) {
+ 
+                                     var title = alert.title;
